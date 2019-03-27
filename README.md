@@ -8,4 +8,6 @@
 
 - Para instalar o angular use este comando ```npm install -g @angular/cli```  
 
+- Para instalar o Typescript no angular use o comando ```npm install -g typescript```  
+
 - Clone o repositorio do projeto na sua maquina com este comando no terminal ```git clone https://gitlab.com/BDAg/frete-facil.git```
