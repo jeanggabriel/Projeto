@@ -29,7 +29,7 @@ mysqlConnection.connect((err)=>{
     if(!err)
     console.log("db connection sucess");
     else
-    console.log("connection failed \n err");
+    console.log("connection failed \nerr");
 });
 app.listen(3000,()=>console.log("express server "));
 app.get("projeto",(res,req)=>{
