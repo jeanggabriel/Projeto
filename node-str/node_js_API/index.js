@@ -40,3 +40,21 @@ app.get("projeto",(res,req)=>{
         console.log(err);
     });
 });
+app.listen(3000,()=>console.log("express server "));
+app.get("projeto",(res,req)=>{
+    mysqlConnection.query("SELECT * FROM carga",(err, rows, fields)=>{
+        if (!err)
+        res.send(rows);
+        else
+        console.log(err);
+    });
+});
+app.listen(3000,()=>console.log("express server "));
+app.get("projeto",(res,req)=>{
+    mysqlConnection.query("SELECT * FROM caminhao",(err, rows, fields)=>{
+        if (!err)
+        res.send(rows);
+        else
+        console.log(err);
+    });
+});
