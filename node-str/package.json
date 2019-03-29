@@ -16,5 +16,9 @@
     "http": "0.0.0",
     "mysql": "github:mysqljs/mysql",
     "st": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "ws": "3.3.2"
   }
 }
