@@ -1,3 +1,4 @@
+'use trict'
 const fs = require('fs');
 
 module.exports = {
@@ -57,7 +58,7 @@ module.exports = {
                     message = "Invalid File format. Only 'gif', 'jpeg' and 'png' images are allowed.";
                     res.render('add-player.ejs', {
                         message,
-                        title: Welcome to Socka | Add a new player
+                        title: "Welcome to Socka | Add a new player"
                     });
                 }
             }
@@ -71,8 +72,8 @@ module.exports = {
                 return res.status(500).send(err);
             }
             res.render('edit-player.ejs', {
-                title: Edit  Player
-                ,player: result[0]
+                title: "Edit  Player",
+                player: result[0]
                 ,message: ''
             });
         });
@@ -117,4 +118,3 @@ module.exports = {
             });
         });
     }
-};
