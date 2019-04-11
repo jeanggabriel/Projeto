@@ -71,7 +71,7 @@ router.post('/carga', (req, res) =>{
   const estado = req.body.estado;
   const cep = req.body.cep;
   const peso = req.body.peso;
-  execSQLQuery(`INSERT INTO carga (tipo, descricao, cidade, cep, estado, peso ) VALUES ('${tipo}', '${descricao}', '${cidade}', '${estado}','${cep}', '${peso}')`, res);
+  execSQLQuery(`INSERT INTO carga (tipo, descricao, cidade,  estado, cep, peso ) VALUES ('${tipo}', '${descricao}', '${cidade}', '${estado}','${cep}', '${peso}')`, res);
 });
 router.get('/caminhao :id?', (req, res) =>{
   let filter = '';
