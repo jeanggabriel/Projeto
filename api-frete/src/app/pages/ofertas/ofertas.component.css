@@ -1,0 +1,24 @@
+.mydiv {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.box {
+    width: 150px;
+    display: inline-block;
+}
+
+td {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+table {
+    display: table;
+    width: 100%;
+ }
+
+.btn {
+    margin: 3px;
+}

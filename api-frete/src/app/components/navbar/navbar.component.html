@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg backgroundnavbar">
+  <a href="/">
+    <img src="https://lh3.googleusercontent.com/_LXovIL3-uE15kthbab3-2Be5zDULjYraaAQcEVT2O_YRdskwJUdY_oGdF_u2wLDI-m2ObQc-1-hb0eCUfWfESTasNwjmiOOG4IBZKy0hvOohTH3wtLSHqY9X0wkaPVwWk0JcPLbt50l_oqgBzXwSE1_tkvQFu4DDgof6Au6-r2KI70RYZlwPHwH19gJo3R1mBKoYIznGvhnIqZiq0dGDRmj8iMPhWyyffwB2eE4Qoud1CfUk2mEmWjTtI506aTrIWHHMXnShUh5J5cC0YqxxFnnHBLpxWbNlNynGafFEq2utYm4OAATeExVz27khx-Nvc3mwuwuTrHVTimqvrVPExT_GAJ2FUk0S8-9YE8X_a6VLm1oMfYVtsjZ3-lsjeXO2y3sNQg-KIuRfd1ux7UHAvnh8YI9zx-sf_DjTu-OaPO8L6aNyR3E9atAxvSh2T7hiw8ow9BVwqhavkwClsJzP-ZxKu28yWAeZFp7r6gNceSAL-0acS8mOwlJQkd6OIbtf0hCFpPvEWupnrGuN7hQcHI7dKE_EZgo3TJq7OKoq8wRuH1kO9AP1gF-ReiuPI7Jkprz8iX-rDcL-LLUfjgH5wRTtUAQjXqx=w1280-h636"
+      alt="Storm Project" width="45px">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link navbartext" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link navbartext" routerLink="/painel">Painel</a>
+      </li>
+    </ul>
+  </div>
+  <ul class="navbar-nav mr-auto" *ngIf="nomeCompleto;else opcao2">
+    <li class=" nav-item" routerLinkActive="active">
+      <a class="nav-link navbartext" href="/perfil">{{nomeCompleto}}</a>
+    </li>
+    <li class=" nav-item" routerLinkActive="active">
+      <span class="nav-link navbartext separador"> | </span>
+    </li>
+    <li>
+      <strong><a class="nav-link navbartext" href="javascript:void(0);" (click)="logout()">Logout</a></strong>
+    </li>
+  </ul>
+  <ng-template #opcao2>
+    <ul class="navbar-nav mr-auto">
+      <li class=" nav-item" routerLinkActive="active">
+        <strong><a class="nav-link navbartext" href="/login">Entrar ou Registrar-se</a></strong>
+      </li>
+    </ul>
+  </ng-template>
+</nav>
