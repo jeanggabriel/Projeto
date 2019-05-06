@@ -1,0 +1,19 @@
+{
+  "name": "frete-facil",
+  "version": "1.0.0",
+  "description": "# TUTORIAL PARA CONFIGURAÇÃO DA PLATAFORMA:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/BDAg/frete-facil.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/BDAg/frete-facil/issues"
+  },
+  "homepage": "https://gitlab.com/BDAg/frete-facil#readme"
+}
