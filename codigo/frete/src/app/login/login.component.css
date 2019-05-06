@@ -1,0 +1,39 @@
+body {
+    background-image: url('cam3.jpg');
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+    height: 0vh;
+    margin: 0;
+    padding: 0;
+    background-color: #ff0022;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 200px;
+    max-width: 600px;
+    height: 320px;
+    
+    background-color: rgba(173, 168, 197, 0.308);
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+  .btn-info {
+    color: #fff;
+    background-color: rgba(56, 48, 48, 0.801);
+    border-color: #626666;
+}
+.text-info {
+    color: #000000!important;
+}
+.registrar {
+  color: #991616!important;
+}
+a:hover { 
+  background-color: yellow;
+}
