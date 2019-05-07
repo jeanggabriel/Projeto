@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/BDAg/frete-facil/issues"
   },
-  "homepage": "https://gitlab.com/BDAg/frete-facil#readme"
+  "homepage": "https://gitlab.com/BDAg/frete-facil#readme",
+  "dependencies": {
+    "zone.js": "^0.9.1"
+  }
 }
