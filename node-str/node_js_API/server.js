@@ -1,10 +1,16 @@
-'use trict'
-const axios = require('axios');
-const port = process.env.PORT || 8080
-const app = require("./app");
-
-const server = axios.createServer(app);
-
-server.listen(port, () => {
-    console.log('API Ligada e rodando na porta : ' + port);
+var axios = require("axios");
+axios.get("http://localhost:3000/").then(function(resposta){
+    console.log(resposta.data);
+});
+axios.get("http://localhost:3000/user").then(function(data){
+    console.log(data);
+});
+axios.get("http://localhost:3000/user_login").then(function(data){
+    console.log(data);
+});
+axios.get("http://localhost:3000/user_carga").then(function(data){
+    console.log(data);
+});
+axios.get("http://localhost:3000/user_caminhao").then(function(data){
+    console.log(data);
 });

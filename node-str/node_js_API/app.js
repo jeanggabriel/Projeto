@@ -1,4 +1,5 @@
 'use trict'
+var axios = require('axios');
 var express = require('express');
 var app = express();         
 var bodyParser = require('body-parser');
@@ -106,3 +107,4 @@ router.post('/user_caminhao', (req, res) =>{
   execSQLQuery(`INSERT INTO user_caminhao (tipo, foto, peso_max) VALUES ('${tipo}','${foto}','${peso_max}')`, res);
 });
 module.exports = app;
+module.exports = axios;
