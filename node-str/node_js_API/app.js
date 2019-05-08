@@ -1,6 +1,5 @@
 'use trict'
 var axios = require('axios');
-var app = axios();
 var express = require('express');
 var app = express();         
 var bodyParser = require('body-parser');
