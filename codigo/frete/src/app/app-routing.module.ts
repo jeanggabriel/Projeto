@@ -3,11 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { CargaComponent } from './carga/carga.component';
 import { CadastroCargaComponent } from './cadastro-carga/cadastro-carga.component';
+import { ExibicaoCaminhaoComponent } from './exibicao-caminhao/exibicao-caminhao.component';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { CadastroCaminhaoComponent } from './cadastro-caminhao/cadastro-caminhao.component';
 
 const routes: Routes = [
- { path: 'carga', component: CargaComponent},
-  { path: 'login', component: LoginComponent
- }
+  { path: 'carga', component: CargaComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'cadastrocarga', component: CadastroCargaComponent},
+  {path: 'exibicaoCaminhao', component: ExibicaoCaminhaoComponent},
+  {path: 'cadastroUsuarioC', component: CadastroUsuarioComponent},
+  {path: 'cadastroCaminhao', component: CadastroCaminhaoComponent}
 ];
 
 @NgModule({
