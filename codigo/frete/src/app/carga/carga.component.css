@@ -38,7 +38,7 @@ body {
 color: #991616!important;
 }
 a:hover { 
-background-color: yellow;
+background-color: rgba(0, 0, 0, 0.479);
 }
 
 .form-control-desc{

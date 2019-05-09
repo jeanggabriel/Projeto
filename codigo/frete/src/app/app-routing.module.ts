@@ -9,14 +9,20 @@ import { CadastroCaminhaoComponent } from './cadastro-caminhao/cadastro-caminhao
 const routes: Routes = [
   { path: 'carga', component: CargaComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'cadastrocarga', component: CadastroCargaComponent},
+  { path: 'cadastrocarga', component: CadastroCargaComponent}  
+];
+const routes1: Routes = [
   { path: 'exibicaocaminhao', component: ExibicaoCaminhaoComponent},
   { path: 'cadastrousuario', component: CadastroUsuarioComponent},
-  { path: 'cadastroCaminhao', component: CadastroCaminhaoComponent}
+  { path: 'cadastrocaminhao', component: CadastroCaminhaoComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+@NgModule({
+  imports: [RouterModule.forRoot(routes1)],
+  exports: [RouterModule]
+})
+
 export class AppRoutingModule { }
