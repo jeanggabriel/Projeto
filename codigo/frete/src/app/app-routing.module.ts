@@ -6,14 +6,13 @@ import { CadastroCargaComponent } from './cadastro-carga/cadastro-carga.componen
 import { ExibicaoCaminhaoComponent } from './exibicao-caminhao/exibicao-caminhao.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CadastroCaminhaoComponent } from './cadastro-caminhao/cadastro-caminhao.component';
-
 const routes: Routes = [
   { path: 'carga', component: CargaComponent},
   { path: 'login', component: LoginComponent},
   { path: 'cadastrocarga', component: CadastroCargaComponent},
-  {path: 'exibicaoCaminhao', component: ExibicaoCaminhaoComponent},
-  {path: 'cadastroUsuarioC', component: CadastroUsuarioComponent},
-  {path: 'cadastroCaminhao', component: CadastroCaminhaoComponent}
+  { path: 'exibicaocaminhao', component: ExibicaoCaminhaoComponent},
+  { path: 'cadastrousuario', component: CadastroUsuarioComponent},
+  { path: 'cadastroCaminhao', component: CadastroCaminhaoComponent}
 ];
 
 @NgModule({

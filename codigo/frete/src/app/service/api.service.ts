@@ -23,19 +23,19 @@ export class ApiService {
   }
 
   public uploadFile(body) {
-    return this.http.post(`${this.API_URL}/anexos/upload`, body, this.getHeader());
+    return this.http.post(`${this.API_URL}/user/upload`, body, this.getHeader());
   }
 
   get(id, regiao) {
-    return this.http.get(`${this.API_URL}/anexos/${id}/${regiao}`, this.getHeader());
+    return this.http.get(`${this.API_URL}/user/${id}/${regiao}`, this.getHeader());
   }
 
   login(form) {
-    return this.http.post(`${this.API_URL}/usuarios/login`, form);
+    return this.http.post(`${this.API_URL}/user_login`, form);
   }
 
   cadastrar(form) {
-    return this.http.post(`${this.API_URL}/usuarios/cadastro`, form, this.getHeader());
+    return this.http.post(`${this.API_URL}/user_caminhao`, form, this.getHeader());
   }
 
   validartoken() {
