@@ -9,9 +9,7 @@ import { CadastroCaminhaoComponent } from './cadastro-caminhao/cadastro-caminhao
 const routes: Routes = [
   { path: 'carga', component: CargaComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'cadastrocarga', component: CadastroCargaComponent}  
-];
-const routes1: Routes = [
+  { path: 'cadastrocarga', component: CadastroCargaComponent},
   { path: 'exibicaocaminhao', component: ExibicaoCaminhaoComponent},
   { path: 'cadastrousuario', component: CadastroUsuarioComponent},
   { path: 'cadastrocaminhao', component: CadastroCaminhaoComponent}
@@ -21,7 +19,7 @@ const routes1: Routes = [
   exports: [RouterModule]
 })
 @NgModule({
-  imports: [RouterModule.forRoot(routes1)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 

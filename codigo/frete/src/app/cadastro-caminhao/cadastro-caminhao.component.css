@@ -28,6 +28,12 @@ h11 {
 .panel-heading{
     font-size:150%;
 }
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
 
 
 

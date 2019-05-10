@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CargaComponent } from '../carga/carga.component';
 
 @Injectable({
   providedIn: 'root'
@@ -23,21 +24,23 @@ export class ApiService {
   }
 
   public uploadFile(body) {
-    return this.http.post(`${this.API_URL}/user/upload`, body, this.getHeader());
+    return this.http.post(`${this.API_URL}/login`, body, this.getHeader());
   }
 
-  get(id, regiao) {
-    return this.http.get(`${this.API_URL}/user/${id}/${regiao}`, this.getHeader());
+  get(id, CargaComponent) {
+    return this.http.get(`${this.API_URL}/user_carga/${id}/${CargaComponent}`, this.getHeader());
   }
 
   login(form) {
-    return this.http.post(`${this.API_URL}/user_login`, form);
+    return this.http.post(`${this.API_URL}/user`, form);
   }
 
   cadastrar(form) {
     return this.http.post(`${this.API_URL}/user_caminhao`, form, this.getHeader());
   }
-
+  cadastrar1(form){
+    return this.http.post(`${this.API_URL}/user_carga`, form, this.getHeader());
+  }
   validartoken() {
     return this.http.get(`${this.API_URL}/usuarios/validartoken`, this.getHeader());
   }

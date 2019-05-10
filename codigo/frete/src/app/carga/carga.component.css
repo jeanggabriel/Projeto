@@ -1,6 +1,4 @@
 
-
-
 body {
   /* background-image: url('cam3.jpg');
   background-size: cover; */
@@ -38,7 +36,7 @@ body {
 color: #991616!important;
 }
 a:hover { 
-background-color: rgba(0, 0, 0, 0.479);
+background-color: rgb(0, 89, 255);
 }
 
 .form-control-desc{
@@ -48,7 +46,7 @@ height: 300px !important;
 padding: .375rem .75rem;
 font-size: 1rem;
 line-height: 1.5;
-color: #495057;
+color: #0080ff;
 background-color: #fff;
 background-clip: padding-box;
 border: 1px solid #ced4da;
@@ -61,4 +59,3 @@ color: #fff;
 background-color: rgba#8b2121;
 border-color: #218b8b;
 }
-

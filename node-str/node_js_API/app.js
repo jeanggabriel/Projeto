@@ -44,7 +44,7 @@ router.get('/user_login', (req, res, get) =>{
 router.get('/user_caminhao', (req, res, get) =>{
   execSQLQuery('SELECT * FROM user_caminhao', res);
 });
-router.get('/user :id?', (req, res) =>{
+router.post('/user :id?', (req, res) =>{
   var filter = '';
   if(req.params.id) filter = ' WHERE ID=' + parseInt(req.params.id);
   execSQLQuery('SELECT * FROM user' + filter, res);
