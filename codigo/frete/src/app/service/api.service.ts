@@ -1,58 +1,29 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CargaComponent } from '../carga/carga.component';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-
-  public API_URL = "http://localhost:3000";
-  // public API_URL = "http://www.api-hom.nksaude.com.br";
-
-
   constructor(private http: HttpClient) { }
 
-  getHeader() {
-    const usuario = JSON.parse(localStorage.getItem('currentUser'));
-    return {
-      headers: {
-        'Authorization': 'Bearer ' + (usuario ? usuario.token : '')
-      }
-    };
+  logar(pessoa) {
+    return this.http.post('https://localhost:3000/user', pessoa);
   }
-
-  public uploadFile(body) {
-    return this.http.post(`${this.API_URL}/login`, body, this.getHeader());
+  cadastrar(pessoa) {
+    return this.http.post('https://localhost:3000/user_login', pessoa);
   }
-
-  get(id, CargaComponent) {
-    return this.http.get(`${this.API_URL}/user_carga/${id}/${CargaComponent}`, this.getHeader());
+  cadastrarcaminhao(cadastrarcaminhao){
+    return this.http.post('https://localhost:3000/user_caminhao',cadastrarcaminhao)
   }
-
-  login(form) {
-    return this.http.post(`${this.API_URL}/user`, form);
+  cadastrarcarga(cadastrarcarga){
+    return this.http.post('https://localhost:3000/user_carga',cadastrarcarga)
   }
-
-  cadastrar(form) {
-    return this.http.post(`${this.API_URL}/user_caminhao`, form, this.getHeader());
+  getcaminhao(getcaminhao){
+    return this.http.get('https://localhost:3000/user_caminhao',getcaminhao)
   }
-  cadastrar1(form){
-    return this.http.post(`${this.API_URL}/user_carga`, form, this.getHeader());
-  }
-  validartoken() {
-    return this.http.get(`${this.API_URL}/usuarios/validartoken`, this.getHeader());
-  }
-  esqueciSenha(form){
-    return this.http.post(`${this.API_URL}/usuarios/esqueci-senha`, form, this.getHeader());
-  }
-
-  recuperarSenha(form){
-    return this.http.post(`${this.API_URL}/usuarios/recuperar_senha`,form,this.getHeader());
-  }
-  token(form){
-    console.log(form)
-    return this.http.get(`${this.API_URL}/usuarios/token/${form}`);
+  getcarga(getcarga){
+    return this.http.get('https://localhost:3000/user_carga',getcarga)
   }
 }
