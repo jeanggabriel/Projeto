@@ -9,6 +9,7 @@ import { CadastroCargaComponent } from './cadastro-carga/cadastro-carga.componen
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CadastroCaminhaoComponent } from './cadastro-caminhao/cadastro-caminhao.component';
 import { ExibicaoCaminhaoComponent } from './exibicao-caminhao/exibicao-caminhao.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ExibicaoCaminhaoComponent } from './exibicao-caminhao/exibicao-caminhao
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

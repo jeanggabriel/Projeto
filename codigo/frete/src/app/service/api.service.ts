@@ -9,6 +9,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   logar(pessoa) {
+    console.log(pessoa)
     return this.http.post('https://localhost:3000/user', pessoa);
   }
   cadastrar(pessoa) {
