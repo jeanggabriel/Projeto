@@ -16,45 +16,46 @@
                       <div id="login-box" class="col-md-12">
                           <form id="login-form" class="form" action="" method="post">
                               <h3 class="text-center text-info"></h3>
-                              <div class="form-group">
 
-                              
-                                  <label for="username" class="text-info">Tipo de Caminhão:</label><br>
-                                  <input type="text" name="username" id="username" class="form-control">
-                              </div>
+                              <div *ngFor="let caminhao of caminhoes">
+                                        <div class="form-group">
+                                            <label for="username" class="text-info">Tipo de Caminhão: </label> &nbsp;&nbsp;
+                                            <span><b>{{caminhao.tipo_de_caminhao}}</b></span>
+                                        </div>
 
-                              <div class="form-group-desc">
-                                <label for="username" class="text-info">Descrição</label><br>
-                                <input type="text" name="username" id="username" class="form-control-desc">
-                            </div>
-                              <div class="form-group">
-                                <label for="username" class="text-info">Cidade:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Estado</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="username" class="text-info">CEP</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Peso</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
-                            </div>
-                            
-                              <!-- <div class="form-group">
-                                  <label for="password" class="text-info">Senha:</label><br>
-                                  <input type="password" name="password" id="password" class="form-control">
-                              </div> -->
-                              <div class="form-group">
-                                  <!-- <label for="remember-me" class="text-info"><span>Próxima Carga</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br> -->
-                                  <a type="Próximo Caminhão" name="Próximo caminhão" class="btn btn-info btn-md" value="Próximo Carga">PROXIMA CAMINHÃO</a>
+                                        <div class="form-group-desc">
+                                            <label for="username" class="text-info" >Descrição: </label> &nbsp;&nbsp;
+                                            <span><b>{{caminhao.descricao}}</b></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="text-info">Cidade: </label> &nbsp;&nbsp;
+                                            <span><b>{{caminhao.cidade}}</b></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="text-info">Estado: </label> &nbsp;&nbsp;
+                                            <span><b>{{caminhao.estado}}</b></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="text-info">CEP: </label> &nbsp;&nbsp;
+                                            <span><b>{{caminhao.cep}}</b></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username" class="text-info">Peso: </label> &nbsp;&nbsp;
+                                            <span><b>{{caminhao.peso_max}}</b></span>
+                                        </div>
+                                        
+                                        <!-- <div class="form-group">
+                                            <label for="password" class="text-info">Senha:</label><br>
+                                            <input type="password" name="password" id="password" class="form-control">
+                                        </div> -->
+                      
+                                        <!-- <div id="register-link" class="text-right">
+                                            <a href="#" class="Registrar">Registrar</a>
+                                        </div> -->
+
+                                        --------------------------------------------------------------------------
+
                               </div>
-                              <!-- <div id="register-link" class="text-right">
-                                  <a href="#" class="Registrar">Registrar</a>
-                              </div> -->
                           </form>
                       </div>
                   </div>
@@ -62,6 +63,4 @@
           </div>
       </div>
   </body>
-
-
 

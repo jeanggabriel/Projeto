@@ -9,33 +9,27 @@
            
           <p> 
             <label for="nome_cad">Seu nome</label>
-            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+            <input [(ngModel)]='nome' id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
           </p>
           <p> 
-            <label for="senha_cad">telefone</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="text" placeholder="ex. 1234"/>
+            <label for="telefone_cad">telefone</label>
+            <input [(ngModel)]='telefone' id="telefone_cad" name="telefone_cad" required="required" type="text" placeholder="ex. 1234"/>
           </p>
            
           <p> 
             <label for="email_cad">Seu e-mail</label>
-            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/> 
+            <input [(ngModel)]='email' id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/> 
           </p>
           
           <p> 
             <label for="senha_cad">Sua senha</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
-          </p>
-
-          <p> 
-            <label for="senha_cad">Confirmar senha</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+            <input [(ngModel)]='senha' id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
           </p>
           <option>
-              <label for="senha_cad">Tipo de cadastro</label>
+              <label for="tipo_de_cadastro_cad">Tipo de cadastro</label>
           </option>
           <p> 
-            <input  href="/cadastrocaminhao"   type="submit" value="CAMINHEIRO"/>
-            <input href="/cadastrocarga"  type="submit" value="CARGUEIRO"/> 
+            <input [(ngModel)]='tipo_de_cadastro' href=""  type="submit" value="Cadastrar" (click)='cadastrar()'/>
           </p>
 
         </form>

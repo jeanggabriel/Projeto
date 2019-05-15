@@ -1,14 +1,26 @@
 'use trict'
-var axios = require('axios');
 var express = require('express');
 var app = express();         
 var bodyParser = require('body-parser');
 var port = 3000; //porta padrão
 var mysql = require('mysql');
+var util = require('util');
 //configurando o body parser para pegar POSTS mais tarde
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //definindo as rotas
+app.use(function (req, res, next) {
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  // Pass to next layer of middleware
+  next();
+});
+
+
 var router = express.Router();
 router.get('/', (req, res) => res.json({ message: 'Welcome To API => Frete-Fácil!' }));
 app.use('/', router);
@@ -55,7 +67,8 @@ router.delete('/user_login :id', (req, res) =>{
 router.post('/user', (req, res) =>{
   var email = req.body.email;
   var senha = req.body.senha;
-  execSQLQuery(`INSERT INTO user (email, senha) VALUES ('${email}','${senha}')`, res);
+  //execSQLQuery(`INSERT INTO user (email, senha ) VALUES ('${email}', '${senha}')`,res);
+  execSQLQuery(`SELECT * FROM user='${email}'`,res);
 });
 
 router.get('/user_login :id?', (req, res) =>{
@@ -72,8 +85,7 @@ router.post('/user_login', (req, res) =>{
     var email = req.body.email;
     var senha = req.body.senha;
     var tipo_de_cadastro = req.body.tipo_de_cadastro;
-    var foto = req.body.foto;
-    execSQLQuery(`INSERT INTO user_login (nome, telefone, email, senha, tipo_de_cadastro, foto) VALUES ('${nome}','${telefone}','${email}','${senha}','${tipo_de_cadastro}','${foto}')`, res);
+    execSQLQuery(`INSERT INTO user_login (nome, telefone, email, senha, tipo_de_cadastro) VALUES ('${nome}','${telefone}','${email}','${senha}','${tipo_de_cadastro}')`, res);
 });
 router.get('/users_carga :id?', (req, res) =>{
   var filter = '';
@@ -101,10 +113,21 @@ router.delete('/user_caminhao :id', (req, res) =>{
   execSQLQuery('DELETE * FROM user_caminhao WHERE ID=' + parseInt(req.params.id), res);
 });
 router.post('/user_caminhao', (req, res) =>{
-  var tipo = req.body.tipo;
-  var foto = req.body.foto;
+  var tipo_de_caminhao = req.body.tipo_de_caminhao;
+  var descricao = req.body.descricao;
+  var cidade = req.body.cidade;
+  var estado = req.body.estado;
+  var cep = req.body.cep;
   var peso_max = req.body.peso_max;
-  execSQLQuery(`INSERT INTO user_caminhao (tipo, foto, peso_max) VALUES ('${tipo}','${foto}','${peso_max}')`, res);
+  execSQLQuery(`INSERT INTO user_caminhao (tipo_de_caminhao, descricao, cidade,  estado, cep, peso_max) VALUES ('${tipo_de_caminhao}','${descricao}','${cidade}','${estado}','${cep}','${peso_max}')`, res);
+});
+router.get('/user_caminhao', (req, res) =>{
+  var tipo_de_caminhao = req.body.tipo_de_caminhao;
+  var descricao = req.body.descricao;
+  var cidade = req.body.cidade;
+  var estado = req.body.estado;
+  var cep = req.body.cep;
+  var peso_max = req.body.peso_max;
+  execSQLQuery(`SELECT * FROM user_caminhao (tipo_de_caminhao, descricao, cidade,  estado, cep, peso_max) VALUES ('${tipo_de_caminhao}','${descricao}','${cidade}','${estado}','${cep}','${peso_max}')`, res);
 });
 module.exports = app;
-module.exports = axios;

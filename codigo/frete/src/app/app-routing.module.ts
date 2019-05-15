@@ -8,9 +8,9 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
 import { CadastroCaminhaoComponent } from './cadastro-caminhao/cadastro-caminhao.component';
 const routes: Routes = [
   { path: 'carga', component: CargaComponent},
-  { path: 'login', component: LoginComponent},
+  { path: '', component: LoginComponent},
   { path: 'cadastrocarga', component: CadastroCargaComponent},
-  { path: 'exibicaocaminhao', component: ExibicaoCaminhaoComponent},
+  { path: 'caminhao', component: ExibicaoCaminhaoComponent},
   { path: 'cadastrousuario', component: CadastroUsuarioComponent},
   { path: 'cadastrocaminhao', component: CadastroCaminhaoComponent}
 ];

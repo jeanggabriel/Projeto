@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ApiService } from '../service/api.service';
 @Component({
   selector: 'app-carga',
   templateUrl: './carga.component.html',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public api: ApiService) { }
+
+  carga: any;
+  getcarga() {
+    this.api.getcarga({}).subscribe( res => {
+      this.carga = res;
+      console.log(this.carga);
+    })
+  }
 
   ngOnInit() {
+    this.getcarga()
   }
 
 }
