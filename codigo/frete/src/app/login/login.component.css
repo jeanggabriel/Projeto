@@ -1,5 +1,16 @@
+/* navbar */
+.navbar-default {
+  background-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
+  border-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
+}
+/* title */
+.navbar-default .navbar-brand {
+  color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
+  image: url('cam3.ico.ico');
+  /* image: url('cam3.jpg'); */
+}
 body {
-    background-image: url('cam3.jpg');
+    background-image: url('cam3.png');
     background-size: cover;
 
     margin: 0;
@@ -7,15 +18,15 @@ body {
     height: 0vh;
     margin: 0;
     padding: 0;
-    background-color: #ff0022;
+    background-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
     height: 100vh;
   }
   #login .container #login-row #login-column #login-box {
     margin-top: 200px;
     max-width: 600px;
     height: 320px;
-    
-    background-color: rgba(173, 168, 197, 0.308);
+
+    background-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
   }
   #login .container #login-row #login-column #login-box #login-form {
     padding: 20px;
@@ -34,6 +45,6 @@ body {
 .registrar {
   color: #991616!important;
 }
-a:hover { 
+a:hover {
   background-color: yellow;
 }

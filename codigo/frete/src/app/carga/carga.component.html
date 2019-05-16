@@ -3,21 +3,21 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
+<nav class="navbar navbar-light bg-light">
+  <img src="cam3.ico.ico" width="30" height="30" class="d-inline-block align-top" alt=""><b>Frete Fácil</b>
+  <b>Exibição de Carga</b>
+</nav>
 <body>
 <div class="panel-heading">
-				<h3 class="panel-title text-center">EXIBIÇÃO DE CARGAS</h3>
 			</div>
-         
       <div id="login">
           <div class="container">
               <div id="login-row" class="row justify-content-center align-items-center">
                   <div id="login-column" class="col-md-6">
                       <div id="login-box" class="col-md-12">
+                      <!-- <h5 class="text-center text-info">EXIBIÇÃO DE CARGAS</h5> -->
                           <form id="login-form" class="form" action="" method="post">
-                              <h3 class="text-center text-info"></h3>
-
-                              <div *ngFor="let carga of carga">
+                              <table *ngFor="let carga of carga">
                                         <div class="form-group">
                                             <label for="username" class="text-info">Tipo de Carga: </label> &nbsp;&nbsp;
                                             <span><b>{{carga.tipo}}</b></span>
@@ -43,19 +43,19 @@
                                             <label for="username" class="text-info">Peso: </label> &nbsp;&nbsp;
                                             <span><b>{{carga.peso}}</b></span>
                                         </div>
-                                        
+
                                         <!-- <div class="form-group">
                                             <label for="password" class="text-info">Senha:</label><br>
                                             <input type="password" name="password" id="password" class="form-control">
                                         </div> -->
-                      
+
                                         <!-- <div id="register-link" class="text-right">
                                             <a href="#" class="Registrar">Registrar</a>
                                         </div> -->
 
                                         --------------------------------------------------------------------------
 
-                              </div>
+                              </table>
                           </form>
                       </div>
                   </div>

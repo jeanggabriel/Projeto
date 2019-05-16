@@ -3,22 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>BOOTSTRAP CRUD LAYOUT</title>
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 
 <body>
 	<div class="container">
-		
+
 		<div class="panel panel-default">
-				
+
 			<div class="panel-heading">
-				<h3 class="panel-title text-center">CADASTRO DE CARGAS</h3>
+				<h5 class="panel-title text-center">CADASTRO DE CARGAS</h5>
 			</div>
-			
+
 			<div id="cadastro-carga">
-				
+
 				<form action="" class="form-horizontal" method="post">
 					<fieldset>
 						<legend>Dados da Carga</legend>
@@ -35,7 +35,7 @@
 							</div>
 						</div>
 					</fieldset>
-					
+
 					<fieldset>
 						<legend>Localidade</legend>
 						<div class="form-group">
@@ -44,7 +44,7 @@
 								<input [(ngModel)]='cidade' name="cidade" type="Cidade" class="form-control" id="Cidade">
 							</div>
 						</div>
-						
+
 						<div class="form-group">
 							<label for="estado" class="col-sm-2 control-label">Estado</label>
 							<div class="col-sm-4">
@@ -66,14 +66,13 @@
 							</div>
 						</div>
 					</fieldset>
-					
+
 					<button type="submit" class="btn btn-primary">
-						<a href="/caminhao" class="glyphicon glyphicon-floppy-disk" aria-hidden="true" (click)='cadastrarcarga()'> Enviar</a>
+						<a class="glyphicon glyphicon-floppy-disk" aria-hidden="true" (click)='cadastrarcarga()' href="/caminhao"> Enviar</a>
 					</button>
 				</form>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

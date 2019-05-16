@@ -1,34 +1,39 @@
+<nav class="navbar navbar-light bg-light">
+  <img src="cam3.ico.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+  Tela de Cadastro
+</nav>
+<body>
 <div class="container" >
     <a class="links" id="paracadastro"></a>
-     
-    <div class="content">      
+
+    <div class="content">
       <!--FORMULÁRIO DE CADASTRO-->
       <div id="cadastro">
-        <form method="post" action=""> 
-          <h1>Cadastro</h1> 
-           
-          <p> 
+        <form method="post" action="">
+          <h1>Cadastro</h1>
+
+          <p>
             <label for="nome_cad">Seu nome</label>
             <input [(ngModel)]='nome' id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
           </p>
-          <p> 
+          <p>
             <label for="telefone_cad">telefone</label>
             <input [(ngModel)]='telefone' id="telefone_cad" name="telefone_cad" required="required" type="text" placeholder="ex. 1234"/>
           </p>
-           
-          <p> 
+
+          <p>
             <label for="email_cad">Seu e-mail</label>
-            <input [(ngModel)]='email' id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/> 
+            <input [(ngModel)]='email' id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/>
           </p>
-          
-          <p> 
+
+          <p>
             <label for="senha_cad">Sua senha</label>
             <input [(ngModel)]='senha' id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
           </p>
           <option>
               <label for="tipo_de_cadastro_cad">Tipo de cadastro</label>
           </option>
-          <p> 
+          <p>
             <input [(ngModel)]='tipo_de_cadastro' href=""  type="submit" value="Cadastrar" (click)='cadastrar()'/>
           </p>
 
@@ -36,3 +41,4 @@
       </div>
     </div>
   </div>
+</body>
