@@ -1,6 +1,6 @@
 'use trict'
 var express = require('express');
-var app = express();         
+var app = express();
 var bodyParser = require('body-parser');
 var port = 3000; //porta padrão
 var mysql = require('mysql');
@@ -36,7 +36,7 @@ console.log('API funcionando!');
       insecureAuth: true
     });
     connection.query(sqlQry, function(error, results, fields){
-        if(error) 
+        if(error)
           res.json(error);
         else
           res.json(results);
@@ -67,8 +67,8 @@ router.delete('/user_login :id', (req, res) =>{
 router.post('/user', (req, res) =>{
   var email = req.body.email;
   var senha = req.body.senha;
-  //execSQLQuery(`INSERT INTO user (email, senha ) VALUES ('${email}', '${senha}')`,res);
-  execSQLQuery(`SELECT * FROM user='${email}'`,res);
+  execSQLQuery(`INSERT INTO user (email, senha ) VALUES ('${email}', '${senha}')`,res);
+  // execSQLQuery(`SELECT * FROM user='${email}'`,res);
 });
 
 router.get('/user_login :id?', (req, res) =>{
@@ -76,7 +76,7 @@ router.get('/user_login :id?', (req, res) =>{
     if(req.params.id) filter = ' WHERE ID=' + parseInt(req.params.id);
     execSQLQuery('SELECT * FROM user_login' + filter, res);
 });
-router.delete('/users_login :id', (req, res) =>{
+router.delete('/user_login :id', (req, res) =>{
     execSQLQuery('DELETE * FROM user_login WHERE ID=' + parseInt(req.params.id), res);
 });
 router.post('/user_login', (req, res) =>{
@@ -87,12 +87,12 @@ router.post('/user_login', (req, res) =>{
     var tipo_de_cadastro = req.body.tipo_de_cadastro;
     execSQLQuery(`INSERT INTO user_login (nome, telefone, email, senha, tipo_de_cadastro) VALUES ('${nome}','${telefone}','${email}','${senha}','${tipo_de_cadastro}')`, res);
 });
-router.get('/users_carga :id?', (req, res) =>{
+router.get('/user_carga :id?', (req, res) =>{
   var filter = '';
   if(req.params.id) filter = ' WHERE ID=' + parseInt(req.params.id);
   execSQLQuery('SELECT * FROM user_carga' + filter, res);
 });
-router.delete('/users_carga :id', (req, res) =>{
+router.delete('/user_carga :id', (req, res) =>{
   execSQLQuery('DELETE * FROM user_carga WHERE ID=' + parseInt(req.params.id), res);
 });
 router.post('/user_carga', (req, res) =>{
@@ -120,14 +120,5 @@ router.post('/user_caminhao', (req, res) =>{
   var cep = req.body.cep;
   var peso_max = req.body.peso_max;
   execSQLQuery(`INSERT INTO user_caminhao (tipo_de_caminhao, descricao, cidade,  estado, cep, peso_max) VALUES ('${tipo_de_caminhao}','${descricao}','${cidade}','${estado}','${cep}','${peso_max}')`, res);
-});
-router.get('/user_caminhao', (req, res) =>{
-  var tipo_de_caminhao = req.body.tipo_de_caminhao;
-  var descricao = req.body.descricao;
-  var cidade = req.body.cidade;
-  var estado = req.body.estado;
-  var cep = req.body.cep;
-  var peso_max = req.body.peso_max;
-  execSQLQuery(`SELECT * FROM user_caminhao (tipo_de_caminhao, descricao, cidade,  estado, cep, peso_max) VALUES ('${tipo_de_caminhao}','${descricao}','${cidade}','${estado}','${cep}','${peso_max}')`, res);
 });
 module.exports = app;

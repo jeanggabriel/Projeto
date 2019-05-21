@@ -1,44 +1,49 @@
+<!DOCTYPE html>
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 <nav class="navbar navbar-light bg-light">
-  <img src="cam3.ico.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-  Tela de Cadastro
+  <img src="cam3.ico.ico" width="30" height="30" class="d-inline-block align-top" alt=""><b>Frete Fácil</b>
+  <b>Tela de Cadastro</b>
 </nav>
 <body>
-<div class="container" >
-    <a class="links" id="paracadastro"></a>
-
-    <div class="content">
-      <!--FORMULÁRIO DE CADASTRO-->
       <div id="cadastro">
-        <form method="post" action="">
-          <h1>Cadastro</h1>
-
-          <p>
-            <label for="nome_cad">Seu nome</label>
-            <input [(ngModel)]='nome' id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
-          </p>
-          <p>
-            <label for="telefone_cad">telefone</label>
-            <input [(ngModel)]='telefone' id="telefone_cad" name="telefone_cad" required="required" type="text" placeholder="ex. 1234"/>
-          </p>
-
-          <p>
-            <label for="email_cad">Seu e-mail</label>
-            <input [(ngModel)]='email' id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/>
-          </p>
-
-          <p>
-            <label for="senha_cad">Sua senha</label>
-            <input [(ngModel)]='senha' id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
-          </p>
-          <option>
-              <label for="tipo_de_cadastro_cad">Tipo de cadastro</label>
-          </option>
-          <p>
-            <input [(ngModel)]='tipo_de_cadastro' href=""  type="submit" value="Cadastrar" (click)='cadastrar()'/>
-          </p>
-
-        </form>
+          <div class="container">
+              <div id="cadastro-row" class="row justify-content-center align-items-center">
+                  <div id="cadastro-column" class="col-md-6">
+                      <div id="cadastro-box" class="col-md-12">
+                          <form id="cadastro-form" class="form" action="" method="post">
+                              <h3 class="text-center text-info"></h3>
+                              <div class="form-group">
+                                  <label for="username" class="text-info"><b>Seu Nome:</b></label>
+                                  <input class="form-control" [(ngModel)]='nome' id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="text-info"><b>Telefone:</b></label>
+                                  <input class="form-control" [(ngModel)]='telefone' id="telefone_cad" name="telefone_cad" required="required" type="text" placeholder="ex. 1234"/>
+                              </div>
+                              <div class="form-group">
+                                <label for="email_cad"><b>Seu e-mail: </b></label>
+                                <input class="form-control" [(ngModel)]='email' id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/>
+                              </div>
+                              <div class="form-group">
+                                <label for="senha_cad"><b>Sua senha: </b></label>
+                                <input class="form-control" [(ngModel)]='senha' id="senha_cad" name="senha_cad" required="required" type="password"/>
+                              </div>
+                              <div class="form-group">                            
+                                <label for="tipo_de_cadastro"><b>Tipo De Cadastro: </b></label>
+                                <input class="form-control" [(ngModel)]='tipo_de_cadastro' id="tipo_de_cadastro" name="tipo_de_cadastro" required="required" type="text" placeholder="ex. Dono da carga ex. Caminhoneiro"/>
+                            </div>
+                              <p>
+                                <a name="Cadastrar" class="btn btn-info btn-md" value="Cadastrar" (click)='cadastrar()' >Cadastrar</a>
+                              </p>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-  </div>
-</body>
+  </body>
+

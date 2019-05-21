@@ -7,29 +7,32 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
-
+<nav class="navbar navbar-light bg-light">
+		<img src="cam3.ico.ico" width="30" height="30" class="d-inline-block align-top" alt=""><b>Frete Fácil</b>
+		<b>Cadastro de Caminhão</b>
+	  </nav>
 <body>
 	<div class="container">
 		
 		<div class="panel panel-default">
 				
 			<div class="panel-heading">
-				<h3 class="panel-title text-center">CADASTRO DE CAMINHÃO</h3>
+				<h3 class="panel-title text-center"></h3>
 			</div>
 			
 			<div id="cadastro-caminhao">
 				
 				<form action="" class="form-horizontal" method="post">
 					<fieldset>
-						<legend>Dados do caminhão</legend>
+						<legend>Dados do caminhão:</legend>
 						<div class="form-group">
-							<label for="tipo" class="col-sm-2 control-label">tipo de caminhão</label>
+							<label for="tipo" class="col-sm-2 control-label">Tipo de caminhão: </label>
 							<div class="col-sm-4">
 								<input [(ngModel)]='tipo_de_caminhao' name="tipo_de_caminhao" type="text" class="form-control" id="tipo_de_caminhao">
 							</div>
             </div>
             <div class="form-group">
-							<label for="Descrição" class="col-sm-2 control-label">Descrição</label>
+							<label for="Descrição" class="col-sm-2 control-label">Descrição: </label>
 							<div class="col-sm-4">
 								<input [(ngModel)]='descricao' name="descricao" type="text" class="form-control" id="Descrição">
 							</div>
@@ -37,30 +40,30 @@
 					</fieldset>
 					
 					<fieldset>
-						<legend>Localidade</legend>
+						<legend>Localidade: </legend>
 						<div class="form-group">
-							<label for="Cidade" class="col-sm-2 control-label">Cidade</label>
+							<label for="Cidade" class="col-sm-2 control-label">Cidade: </label>
 							<div class="col-sm-4">
 								<input [(ngModel)]='cidade' name="cidade" type="Cidade" class="form-control" id="Cidade">
 							</div>
 						</div>
 						
 						<div class="form-group">
-							<label for="estado" class="col-sm-2 control-label">Estado</label>
+							<label for="estado" class="col-sm-2 control-label">Estado: </label>
 							<div class="col-sm-4">
 								<input [(ngModel)]='estado' name="estado" type="estado" class="form-control" id="estado">
 							</div>
 						</div>
 					<fieldset>
 						<div class="form-group">
-							<label for="CEP" class="col-sm-2 control-label">CEP</label>
+							<label for="CEP" class="col-sm-2 control-label">CEP: </label>
 							<div class="col-sm-4">
 								<input [(ngModel)]='cep' name="cep" type="text" class="form-control" id="CEP">
 							</div>
 						</div>
           </fieldset>
 						<div class="form-group">
-							<label for="Peso Da Carga" class="col-sm-2 control-label">Peso Do Caminhão</label>
+							<label for="Peso Do Caminhao" class="col-sm-2 control-label">Peso Maximo:</label>
 							<div class="col-sm-4">
 								<input [(ngModel)]='peso_max' name="peso_max" type="peso_max" class="form-control" id="peso_max">
 							</div>
@@ -68,7 +71,7 @@
 					</fieldset>
 					
 					<button type="submit" class="btn btn-primary">
-						<a href="/carga" class="glyphicon glyphicon-floppy-disk" aria-hidden="true" (click)='cadastrarcaminhao()'> Enviar</a>
+						<a class="glyphicon glyphicon-floppy-disk" aria-hidden="true" (click)='cadastrarcaminhao()'submit="" > Enviar</a>
 					</button>
 				</form>
 			</div>

@@ -1,50 +1,51 @@
 /* navbar */
 .navbar-default {
-  background-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
-  border-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
+  background-color: rgb(255, 255, 255)(255, 255, 255, 0);
+  border-color: rgb(255, 255, 255)(255, 255, 255, 0);
 }
 /* title */
 .navbar-default .navbar-brand {
-  color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
+  color: rgb(255, 255, 255)(51, 51, 51, 0);
   image: url('cam3.ico.ico');
   /* image: url('cam3.jpg'); */
+}body {
+  background-image: url('cam3.jpg');
+  background-size: cover;
+
+  margin: 0;
+  padding: 0;
+  height: 0vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ff0022;
+  height: 100vh;
 }
-body {
-    background-image: url('cam3.png');
-    background-size: cover;
+#login .container #login-row #login-column #login-box {
+  margin-top: 200px;
+  max-width: 600px;
+  height: 320px;
 
-    margin: 0;
-    padding: 0;
-    height: 0vh;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
-    height: 100vh;
-  }
-  #login .container #login-row #login-column #login-box {
-    margin-top: 200px;
-    max-width: 600px;
-    height: 320px;
-
-    background-color: rgba(51, 51, 51, 0)(51, 51, 51, 0);
-  }
-  #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
-  }
-  #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-  }
-  .btn-info {
-    color: #fff;
-    background-color: rgba(56, 48, 48, 0.801);
-    border-color: #626666;
+  background-color: rgba(215, 214, 218, 0.438);
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+.btn-info {
+  color: #fff;
+  background-color: rgba(56, 48, 48, 0.801);
+  border-color: #626666;
 }
 .text-info {
-    color: #000000!important;
+  color: #000000!important;
 }
 .registrar {
-  color: #991616!important;
+color: #991616!important;
 }
 a:hover {
-  background-color: yellow;
+background-color: yellow;
 }
+
+
