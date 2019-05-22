@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
+import { filterQueryId } from '@angular/core/src/view/util';
 @Component({
   selector: 'app-carga',
   templateUrl: './carga.component.html',
@@ -10,6 +11,7 @@ export class CargaComponent implements OnInit {
   constructor(public api: ApiService) { }
 
   carga: any;
+
   getcarga() {
     this.api.getcarga({}).subscribe( res => {
       this.carga = res;
